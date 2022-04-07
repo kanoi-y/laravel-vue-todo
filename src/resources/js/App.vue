@@ -1,18 +1,17 @@
+
 <template>
-  <div>{{ hello }}</div>
+  <div>{{ message }}</div>
 </template>
 
-// lang="ts"だとエラーが出る
-<script>
-import { ref } from "vue";
-export default {
+<script lang='ts'>
+import { defineComponent, ref } from "vue";
+
+export default defineComponent({
   setup() {
-      const hello = ref(
-          "Hello From TypeScript"
-      )
-      return {
-          hello
-      }
-  },
-};
+    const message = ref<string>("Hello World");
+    return {
+      message
+    };
+  }
+});
 </script>
