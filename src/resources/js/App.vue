@@ -2,6 +2,7 @@
   <div>{{ hello }}</div>
 </template>
 
+// lang="ts"だとエラーが出る
 <script>
 import { ref } from "vue";
 export default {
